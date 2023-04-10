@@ -11,6 +11,10 @@ def shoot():
     """
     typer.echo("Shooting portal gun")
 
+@app.command()
+def greet():
+
+    typer.echo("greeting")
 
 
 
