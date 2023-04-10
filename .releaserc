@@ -2,10 +2,17 @@
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
     [
-      "@semantic-release/python",
+      "@semantic-release/exec",
       {
-        "publishPlugin": "@semantic-release/pypi"
+        "prepareCmd": "poetry build"
+      }
+    ],
+    [
+      "@semantic-release/exec",
+      {
+        "publishCmd": "twine upload dist/*"
       }
     ],
     "@semantic-release/git"
