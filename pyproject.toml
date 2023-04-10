@@ -20,8 +20,6 @@ blockertest = "blockertest.main:app"
 version_variable = "setup.py:__version__"
 upload_to_pypi = true
 
-[tool.semantic_release.upload_to_pypi]
-repository = "https://upload.pypi.org/legacy/"
 
 [tool.semantic_release.plugins]
 pre_commit = ["@semantic-release/changelog", "@semantic-release/git"]
