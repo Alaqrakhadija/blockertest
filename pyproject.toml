@@ -17,15 +17,11 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry.scripts]
 blockertest = "blockertest.main:app"
 [tool.semantic_release]
-version_variable = "setup.py:__version__"
+version_variable = [
+    "src_folder/__init__.py:__version__",
+    "pyproject.toml:version"
+]
+branch = "main"
 upload_to_pypi = true
-
-
-[tool.semantic_release.plugins]
-pre_commit = ["@semantic-release/changelog", "@semantic-release/git"]
-post = "@semantic-release/github"
-
-[tool.semantic_release.plugins.analyzeCommits]
-preset = "angular"
-minor_keywords = ["feat"]
-patch_keywords = ["fix"]
+upload_to_release = true
+build_command = "pip install poetry && poetry build"
