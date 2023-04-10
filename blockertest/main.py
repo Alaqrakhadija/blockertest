@@ -15,3 +15,6 @@ def shoot():
 
 
 
+@app.command()
+def greet():
+    typer.echo("greeting")
