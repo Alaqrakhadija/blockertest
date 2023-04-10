@@ -16,6 +16,10 @@ def greet():
 
     typer.echo("greeting")
 
+@app.command()
+def ADD():
+
+    typer.echo("greeting")
 
 
 
