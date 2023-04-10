@@ -16,5 +16,5 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
 blockertest = "blockertest.main:app"
-[tool.semantic-release]
+[tool.semantic_release]
 version_variable = "setup.py:__version__"
