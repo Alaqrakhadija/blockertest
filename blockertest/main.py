@@ -23,3 +23,6 @@ def ADD():
 
 
 
+@app.command()
+def greet():
+    typer.echo("greeting")
